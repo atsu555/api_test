@@ -3,21 +3,23 @@ import './styles.css'; // スタイルをインポート
 import { fetchPrefectures } from '../../api';
 
 function SelectPrefecture(props) {
-  const [prefectures, SelectPrefectures] = useState([]);
+  const { prefectures, onChange } = props;
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchPrefectures();
-      SelectPrefectures(data);
-    }
-    fetchData();
-  }, [])
-
+  const handlePrefectureChange = (event) => {
+    const selectedPrefCode = event.target.value;
+    onChange(selectedPrefCode);
+  };
 
   return (
     <div className="select-container">
-      <label className="select-label" htmlFor="prefecture-select">都道府県:</label>
-      <select id="prefecture-select" className="select-dropdown">
+      <label className="select-label" htmlFor="prefecture-select">
+        都道府県:
+      </label>
+      <select
+        id="prefecture-select"
+        className="select-dropdown"
+        onChange={handlePrefectureChange}
+      >
         <option value="">都道府県を選択してください</option>
         {prefectures.map((pref) => (
           <option key={pref.prefCode} value={pref.prefCode}>
@@ -26,7 +28,6 @@ function SelectPrefecture(props) {
         ))}
       </select>
     </div>
-
   );
 }
 
