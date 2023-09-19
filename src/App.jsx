@@ -4,12 +4,14 @@ import './App.css';
 import { fetchPrefectures, fetchJobData } from './api';
 import SelectYear from './components/SelectYear/SelectYear';
 import SelectMatter from './components/SelectMatter/SelectMatter';
+import SelectClass from './components/SelectClass/SelectClass';
 
 function App() {
   const [prefectures, setPrefectures] = useState([]);
   const [selectedPrefecture, setSelectedPrefecture] = useState(null);
   const [selectedYear, setSelectedYear] = useState('2014');
   const [selectedMatter, setSelectedMatter] = useState('1');
+  const [selectedClass, setSelectedClass] = useState('1');
   const [jobData, setJobData] = useState([]);
 
   useEffect(() => {
@@ -26,14 +28,15 @@ function App() {
         const data = await fetchJobData(
           selectedPrefecture,
           selectedYear,
-          selectedMatter
+          selectedMatter,
+          selectedClass
         );
         setJobData(data);
         console.log(data);
       };
       fetchData();
     }
-  }, [selectedPrefecture, selectedYear, selectedMatter]);
+  }, [selectedPrefecture, selectedYear, selectedMatter, selectedClass]);
 
   return (
     <div className="App">
@@ -44,6 +47,10 @@ function App() {
       />
       <SelectYear onChange={(year) => setSelectedYear(year)} />
       <SelectMatter onChange={(matter) => setSelectedMatter(matter)} />
+      <SelectClass 
+      onChange={(classType) => setSelectedClass(classType)}
+      selectedClass={selectedClass}
+      />
       <div>
         <div className="job">
           <table>
@@ -52,8 +59,8 @@ function App() {
                 <th>職業分類名</th>
                 <th>求人・求職者数</th>
               </tr>
-              {jobData.map((job) => (
-                <tr key={job.broadCode}>
+              {jobData.map((job, index) => (
+                <tr key={index}>
                   <td>{job.broadName}</td>
                   <td>{job.value} 人</td>
                 </tr>
