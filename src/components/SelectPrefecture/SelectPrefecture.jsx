@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
 import './styles.css'; // スタイルをインポート
-import { fetchPrefectures } from '../../api';
 
 function SelectPrefecture(props) {
   const { prefectures, onChange } = props;
