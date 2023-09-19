@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import SelectPrefecture from './components/SelectPrefecture/SelectPrefecture';
 import './App.css';
-import {
-  fetchPrefectures,
-  fetchJobDataByPrefecture,
-  fetchJobData
-} from './api';
+import { fetchPrefectures, fetchJobData } from './api';
+import SelectYear from './components/SelectYear/SelectYear';
 
 function App() {
   const [prefectures, setPrefectures] = useState([]);
+  const [selectedYear, setSelectedYear] = useState('2014');
   const [selectedPrefecture, setSelectedPrefecture] = useState(null);
   const [jobData, setJobData] = useState([]);
 
@@ -23,15 +21,13 @@ function App() {
   useEffect(() => {
     if (selectedPrefecture) {
       const fetchData = async () => {
-        const data = await fetchJobData(selectedPrefecture);
+        const data = await fetchJobData(selectedPrefecture, selectedYear);
         setJobData(data);
         console.log(data);
       };
       fetchData();
     }
-  }, [selectedPrefecture]);
-
-  
+  }, [selectedPrefecture, selectedYear]);
 
   return (
     <div className="App">
@@ -40,6 +36,7 @@ function App() {
         prefectures={prefectures}
         onChange={(prefCode) => setSelectedPrefecture(prefCode)}
       />
+      <SelectYear onChange={(year) => setSelectedYear(year)} />
       <div>
         <div className="job">
           <table>

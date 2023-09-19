@@ -13,9 +13,9 @@ export const fetchPrefectures = async () => {
 };
 
 // 求人・求職者
-export const fetchJobData = async (prefCode) => {
+export const fetchJobData = async (prefCode, year) => {
   const response = await fetch(
-    `${API_ENDPOINT}/regionalEmploy/analysis/portfolio?prefCode=${prefCode}&year=2016&matter=1&class=1`,
+    `${API_ENDPOINT}/regionalEmploy/analysis/portfolio?prefCode=${prefCode}&year=${year}&matter=1&class=1`,
     {
       headers: {
         'X-API-KEY': API_KEY
