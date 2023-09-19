@@ -47,9 +47,9 @@ function App() {
       />
       <SelectYear onChange={(year) => setSelectedYear(year)} />
       <SelectMatter onChange={(matter) => setSelectedMatter(matter)} />
-      <SelectClass 
-      onChange={(classType) => setSelectedClass(classType)}
-      selectedClass={selectedClass}
+      <SelectClass
+        onChange={(classType) => setSelectedClass(classType)}
+        selectedClass={selectedClass}
       />
       <div>
         <div className="job">
@@ -62,7 +62,9 @@ function App() {
               {jobData.map((job, index) => (
                 <tr key={index}>
                   <td>
-                    { selectedClass === "1" ? job.broadName : `${job.broadName} > ${job.middleName} `}
+                    {selectedClass === '1'
+                      ? job.broadName
+                      : `${job.broadName} > ${job.middleName} `}
                   </td>
                   <td>{job.value} 人</td>
                 </tr>

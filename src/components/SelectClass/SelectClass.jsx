@@ -4,7 +4,7 @@ function SelectClass(props) {
   const { onChange, selectedClass } = props;
 
   const handleClassChange = (e) => {
-    const selectedClass= e.target.value;
+    const selectedClass = e.target.value;
     onChange(selectedClass);
   };
 
