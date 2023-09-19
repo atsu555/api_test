@@ -3,8 +3,8 @@ import './style.css';
 function SelectMatter(props) {
   const { onChange } = props;
 
-  const handleMatterChange = (event) => {
-    const selectedMatter = event.target.value;
+  const handleMatterChange = (e) => {
+    const selectedMatter = e.target.value;
     onChange(selectedMatter);
   };
 

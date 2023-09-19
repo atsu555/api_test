@@ -3,8 +3,8 @@ import './styles.css'; // スタイルをインポート
 function SelectYear(props) {
   const { onChange } = props;
 
-  const handleYearChange = (event) => {
-    const selectedYear = event.target.value;
+  const handleYearChange = (e) => {
+    const selectedYear = e.target.value;
     onChange(selectedYear);
   };
 

@@ -3,8 +3,8 @@ import './styles.css'; // スタイルをインポート
 function SelectPrefecture(props) {
   const { prefectures, onChange } = props;
 
-  const handlePrefectureChange = (event) => {
-    const selectedPrefCode = event.target.value;
+  const handlePrefectureChange = (e) => {
+    const selectedPrefCode = e.target.value;
     onChange(selectedPrefCode);
   };
 
