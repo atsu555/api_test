@@ -61,7 +61,9 @@ function App() {
               </tr>
               {jobData.map((job, index) => (
                 <tr key={index}>
-                  <td>{job.broadName}</td>
+                  <td>
+                    { selectedClass === "1" ? job.broadName : `${job.broadName} > ${job.middleName} `}
+                  </td>
                   <td>{job.value} 人</td>
                 </tr>
               ))}
