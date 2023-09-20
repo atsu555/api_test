@@ -10,19 +10,17 @@ function SelectMatter(props) {
 
   return (
     <div className="select-container">
-      <label htmlFor="gender-select" className="select-label">
+      <label htmlFor="matter-select" className="select-label">
         表示内容:
       </label>
-      <select id="gender-select" onChange={handleMatterChange}>
-        <option value="1" className="select-dropdown">
-          有効求職者数（総数）
-        </option>
-        <option value="2" className="select-dropdown">
-          有効求職者数（男性）
-        </option>
-        <option value="3" className="select-dropdown">
-          有効求職者数（女性）
-        </option>
+      <select
+        className="select-dropdown"
+        id="matter-select"
+        onChange={handleMatterChange}
+      >
+        <option value="1">有効求職者数（総数）</option>
+        <option value="2">有効求職者数（男性）</option>
+        <option value="3">有効求職者数（女性）</option>
       </select>
     </div>
   );

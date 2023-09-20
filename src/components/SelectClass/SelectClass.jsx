@@ -10,7 +10,7 @@ function SelectClass(props) {
 
   return (
     <div className="class-selection">
-      <span>表示分類:</span>
+      <span className="class-title">表示分類1</span>
       <label>
         <input
           type="radio"

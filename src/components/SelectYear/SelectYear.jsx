@@ -13,22 +13,16 @@ function SelectYear(props) {
       <label htmlFor="year-select" className="select-label">
         年度:
       </label>
-      <select id="select-dropdown" onChange={handleYearChange}>
-        <option value="2012" className="select-dropdown">
-          2012
-        </option>
-        <option value="2013" className="select-dropdown">
-          2013
-        </option>
-        <option value="2014" className="select-dropdown">
-          2014
-        </option>
-        <option value="2015" className="select-dropdown">
-          2015
-        </option>
-        <option value="2016" className="select-dropdown">
-          2016
-        </option>
+      <select
+        className="select-dropdown"
+        id="year-select"
+        onChange={handleYearChange}
+      >
+        <option value="2012">2012年</option>
+        <option value="2013">2013年</option>
+        <option value="2014">2014年</option>
+        <option value="2015">2015年</option>
+        <option value="2016">2016年</option>
       </select>
     </div>
   );

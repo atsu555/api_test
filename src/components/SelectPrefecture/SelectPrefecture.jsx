@@ -11,7 +11,7 @@ function SelectPrefecture(props) {
   return (
     <div className="select-container">
       <label className="select-label" htmlFor="prefecture-select">
-        都道府県:
+        都道府県
       </label>
       <select
         id="prefecture-select"
