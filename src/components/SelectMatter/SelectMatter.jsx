@@ -11,7 +11,7 @@ function SelectMatter(props) {
   return (
     <div className="select-container">
       <label htmlFor="matter-select" className="select-label">
-        表示内容:
+        表示内容
       </label>
       <select
         className="select-dropdown"

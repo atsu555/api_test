@@ -1,4 +1,9 @@
 .class-title {
   font-weight: bold;
   display: block;
+  font-size: 1.3rem;
+}
+
+.class-selection label{
+  font-size: 1.6rem;
 }

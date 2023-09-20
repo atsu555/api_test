@@ -11,7 +11,7 @@ function SelectYear(props) {
   return (
     <div className="select-container">
       <label htmlFor="year-select" className="select-label">
-        年度:
+        年度
       </label>
       <select
         className="select-dropdown"

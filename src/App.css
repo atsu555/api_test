@@ -1,3 +1,7 @@
+html {
+  font-size: 62.5%;
+}
+
 .container {
   max-width: 1000px;
   width: 90%;
@@ -5,7 +9,9 @@
 }
 
 h1 {
-  text-align: center;
+  /* text-align: center; */
+  font-size: 3rem;
+  margin-bottom: 50px;
 }
 
 .displayFlex {
@@ -25,6 +31,7 @@ table {
 th,
 td {
   text-align: left;
+  font-size: 1.6rem;
 }
 
 th:first-child,
@@ -35,4 +42,18 @@ td:first-child {
 td {
   padding: 20px 20px 20px 0;
   border-bottom: 1px solid rgba(19,19,19, 0.4);
+}
+
+@media screen and (max-width: 1024px) {
+  
+}
+
+/* iPad Airのサイズ (横向き) */
+@media screen and (max-width: 768px) {
+  
+}
+
+/* スマホのサイズ */
+@media screen and (max-width: 480px) {
+  
 }
