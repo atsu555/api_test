@@ -1,5 +1,3 @@
-import './styles.css'; // スタイルをインポート
-
 function SelectYear(props) {
   const { onChange } = props;
 

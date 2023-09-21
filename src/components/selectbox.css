@@ -1,0 +1,42 @@
+.select-container {
+  margin-bottom: 20px;
+}
+
+.select-label {
+  font-weight: bold;
+  display: block;
+  font-size: 1.3rem;
+}
+
+.select-dropdown {
+  width: 265px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+@media screen and (max-width: 820px) {
+  .select-dropdown {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .select-container {
+    width: 45%;
+  }
+
+  .select-dropdown {
+    width: 265px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .select-dropdown {
+    width: 160px;
+    font-size: 1.2rem;
+  }
+}
+

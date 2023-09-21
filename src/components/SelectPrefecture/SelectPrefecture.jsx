@@ -1,4 +1,4 @@
-import './styles.css'; // スタイルをインポート
+import '../selectbox.css'; // スタイルをインポート
 
 function SelectPrefecture(props) {
   const { prefectures, onChange } = props;
@@ -18,7 +18,6 @@ function SelectPrefecture(props) {
         className="select-dropdown"
         onChange={handlePrefectureChange}
       >
-        <option value="">都道府県を選択してください</option>
         {prefectures.map((pref) => (
           <option key={pref.prefCode} value={pref.prefCode}>
             {pref.prefName}

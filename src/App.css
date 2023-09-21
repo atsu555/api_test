@@ -3,13 +3,13 @@ html {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 900px;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 100px;
 }
 
 h1 {
-  /* text-align: center; */
+  text-align: center;
   font-size: 3rem;
   margin-bottom: 50px;
 }
@@ -39,21 +39,47 @@ td:first-child {
   width: 75%;
 }
 
+th,
 td {
   padding: 20px 20px 20px 0;
-  border-bottom: 1px solid rgba(19,19,19, 0.4);
+  border-bottom: 1px solid rgba(19, 19, 19, 0.4);
 }
 
 @media screen and (max-width: 1024px) {
-  
+  .dataArea {
+    width: 500px;
+  }
 }
 
-/* iPad Airのサイズ (横向き) */
 @media screen and (max-width: 768px) {
-  
+  .displayFlex {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .selectArea {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .dataArea {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
 }
 
-/* スマホのサイズ */
 @media screen and (max-width: 480px) {
-  
+  th,
+  td {
+    font-size: 1.4rem;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 68%;
+  }
 }

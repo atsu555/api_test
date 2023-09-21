@@ -8,7 +8,7 @@ import SelectClass from './components/SelectClass/SelectClass';
 
 function App() {
   const [prefectures, setPrefectures] = useState([]);
-  const [selectedPrefecture, setSelectedPrefecture] = useState(null);
+  const [selectedPrefecture, setSelectedPrefecture] = useState('1');
   const [selectedYear, setSelectedYear] = useState('2014');
   const [selectedMatter, setSelectedMatter] = useState('1');
   const [selectedClass, setSelectedClass] = useState('1');

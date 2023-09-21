@@ -1,5 +1,3 @@
-import './style.css';
-
 function SelectMatter(props) {
   const { onChange } = props;
 
